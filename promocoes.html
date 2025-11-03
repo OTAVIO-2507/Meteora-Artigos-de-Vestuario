@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+  <title>Promoções Exclusivas - Meteora</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/estilos.css">
+</head>
+
+<body class="d-flex flex-column" style="min-height: 100vh;">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md bg-black navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img class="d-block" src="./assets/logo-meteora.png" alt="Logo da loja Meteora">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Lojas.html">Lojas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="novidades.html">Novidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="promocoes.html">Promoção</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 rounded-0" type="search" placeholder="Digite o produto"
+            aria-label="Pesquisar">
+          <button class="btn btn-outline-light rounded-0 d-flex align-items-center" type="submit"><i
+              class="bi bi-search-heart-fill me-1"></i> Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-promo"
+    style="background: linear-gradient(135deg, rgba(147, 83, 255, 0.5), rgba(218, 255, 1, 0.15)), url('./assets/promo-banner.jpg'); background-size: cover;">
+    <div class="text-center">
+      <h2 class="display-4 fw-bold text-white"><i class="bi bi-leaf-fill"></i> Super Promoções de Outono!</h2>
+      <p class="lead text-white opacity-75">Descontos imperdíveis em toda a loja. Só por tempo limitado! Aproveite
+        enquanto duram!</p>
+      <a href="#promo-list" class="btn btn-roxo btn-lg">Ver Promoções</a>
+    </div>
+  </header>
+
+  <!-- BANNER COM DICAS -->
+  <section class="container mt-4">
+    <div class="row text-center">
+      <div class="card-promocao col-md-4 mb-4">
+        <div class="promo-banner p-3 rounded-3 shadow-lg" style="background-color:var(--ciano);">
+          <h4 class="text-dark fw-bold">Desconto de 30% em Todo o Site</h4>
+          <p class="text-dark">Use o código: <strong>OUTONO30</strong> e garanta um desconto incrível.</p>
+        </div>
+      </div>
+      <div class="card-promocao col-md-4 mb-4">
+        <div class="promo-banner p-3 rounded-3 shadow-lg" style="background-color: var(--roxo);">
+          <h4 class="text-white fw-bold">Compre 1, Leve 2</h4>
+          <p class="text-white">Compre qualquer camiseta e <strong>ganhe outra de igual valor!</strong> Só hoje!</p>
+        </div>
+      </div>
+      <div class="card-promocao col-md-4 mb-4">
+        <div class="promo-banner p-3 rounded-3 shadow-lg" style="background-color:var(--limao);">
+          <h4 class="text-dark fw-bold">Frete Grátis</h4>
+          <p class="text-dark">Em compras <strong>acima de R$ 200</strong>, o frete é por nossa conta!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOÇÕES EM DESTAQUE -->
+  <section id="promo-list" class="container mt-2  mb-5">
+    <div class="aos-hidden" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <h2 class="text-center fw-bold mb-2"><i class="bi bi-cart-plus-fill"></i> Ofertas Imperdíveis</h2>
+      <p class="text-center lead text-light opacity-75 pb-4">Aproveite descontos exclusivos nesta semana! É a sua chance
+        de economizar muito em produtos selecionados.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+      <!-- ITEM 1 -->
+      <div class="col">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-percent"> Promoção</i>
+          </span>
+          <img src="./assets/Desktop/produtos/camiseta.png" alt="Camiseta Conforto Neon" class="card-img-top">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold">Camiseta Conforto Neon</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">Tons vibrantes e 100% algodão para estilo e conforto no seu dia a dia.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price"><s>R$ 69,99</s> | R$49,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ITEM 2 -->
+      <div class="col">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-percent"> Promoção</i>
+          </span>
+          <img src="./assets/Desktop/produtos/calca.png" alt="Calça Wide Leg Linho" class="card-img-top">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold">Calça Wide Leg Linho</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">Caimento perfeito, do casual ao elegante. Ideal para qualquer ocasião.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price"><s>R$ 179,99</s> | R$149,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ITEM 3 -->
+      <div class="col">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-percent"> Promoção</i>
+          </span>
+          <img src="./assets/Desktop/produtos/tenis.png" alt="Tênis Chunky V2" class="card-img-top">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold">Tênis Chunky V2</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">Conforto extremo e design moderno para o seu dia a dia.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price"><s>R$ 249,99</s> | R$179,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ITEM 4 -->
+      <div class="col">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-percent"> Promoção</i>
+          </span>
+          <img src="./assets/Desktop/produtos/oculos.png" alt="Tênis Chunky V2" class="card-img-top">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold">Óculos Redondo Grafite</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">Armação metálica minimalista com lente premium.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price"><s>R$ 119,99</s> | R$99,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="container pb-5">
+    <div class="cta-news p-4 p-lg-5 text-center">
+      <h3 class="fw-bold mb-2">
+        Assine nossa Newletter e Ganhe
+        <span style="color: var(--limao)">10% OFF</span>
+      </h3>
+      <p class="text-white-50 mb-4">
+        Receba as últimas promoções e descontos exclusivos direto no seu e-mail.
+      </p>
+      <form class="row g-2 justify-content-center"
+        onsubmit="event.preventDefault(); alert('Obrigado por assinar nossa Newletter, já enviamos as promoções do mês no seu e-mail!'); this.querySelector('input[type=email]').value = '';">
+        <div class="col-12 col-md-5">
+          <input id="placeholder_branco" class="form-control form-control-lg bg-dark text-white border-secondary"
+            type="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="col-12 col-md-auto">
+          <button class="btn btn-roxo btn-lg">Receber Promoções</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center bg-black text-bg-dark mt-auto">
+    <p class="card-text py-1 m-3">
+      2025
+      <i class="bi bi-c-circle"></i>
+      Desenvolvido por Otávio Oliveira | Projeto Meteora artigos de Moda.
+    </p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>

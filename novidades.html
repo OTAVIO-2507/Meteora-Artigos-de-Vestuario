@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+  <title>Meteora</title>
+  <!-- Icons & Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/estilos.css">
+
+</head>
+
+<body class="d-flex flex-column" style="min-height: 100vh">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md bg-black navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <h1 class="m-0">
+          <img class="d-block" src="./assets/logo-meteora.png" alt="Logo da loja Meteora">
+        </h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Lojas.html">Lojas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              Novidades
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="promocoes.html">Promoção</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 rounded-0" type="search" placeholder="Digite o produto"
+            aria-label="Pesquisar">
+          <button class="btn btn-outline-light rounded-0 d-flex align-items-center" type="submit"><i
+              class="bi bi-search-heart-fill me-1"></i>
+            Buscar
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- HERO -->
+  <header class="hero-novidades">
+    <div class="hero-blur"></div>
+    <div class="container position-relative">
+      <span class="hero-pill mb-3">
+        <i class="bi bi-stars"></i>
+        Lançamentos • Edição 2025
+      </span>
+      <h2 class="animated-title hero-title display-5 fw-bold mb-2">
+        Novidades que
+        <span style="color: var(--limao)">brilham</span>
+        no seu look
+      </h2>
+      <p class="animated-title lead text-light opacity-75 mb-4">
+        Peças exclusivas, cores vibrantes e conforto para todas as ocasiões.
+        Explore a curadoria da Meteora.
+      </p>
+      <div class="d-flex gap-2">
+        <a href="#grid" class="btn btn-roxo btn-lg">Ver tudo</a>
+        <a href="#filtros" class="btn btn-outline-limao btn-lg">
+          Filtrar por categoria
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- FILTROS -->
+  <section id="filtros" class="container py-4">
+    <div class="d-flex flex-wrap align-items-center gap-2 justify-content-between">
+      <div class="d-flex flex-wrap gap-2">
+        <button class="chip active" data-filter="*">
+          <i class="bi bi-grid"></i>
+          Tudo
+        </button>
+        <button class="chip" data-filter="camisetas">
+          <i class="bi bi-badge-ad"></i>
+          Camisetas
+        </button>
+        <button class="chip" data-filter="calcas">
+          <i class="bi bi-sliders2"></i>
+          Calças
+        </button>
+        <button class="chip" data-filter="calcados">
+          <i class="bi bi-lightning"></i>
+          Calçados
+        </button>
+        <button class="chip" data-filter="acessorios">
+          <i class="bi bi-sunglasses"></i>
+          Acessórios
+        </button>
+        <button class="chip" data-filter="casacos">
+          <i class="bi bi-award"></i>
+          Casacos
+        </button>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <label class="text-white">Ordenar:</label>
+        <select id="ordenar" class="form-select bg-dark text-white border-secondary">
+          <option value="padrao">Padrão</option>
+          <option value="preco-asc">Preço: menor para maior</option>
+          <option value="preco-desc">Preço: maior para menor</option>
+          <option value="novo">Mais novos</option>
+        </select>
+      </div>
+    </div>
+  </section>
+  <!-- GRID MASONRY DIFERENTÃO -->
+  <main id="grid" class="container pb-5">
+    <div class="masonry-novidades" id="masonry-novidades">
+      <!-- ITEM 1 -->
+      <article class="masonry-item" data-cat="camisetas" data-preco="70" data-novo="2025-10-15">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-stars me-1"></i>
+            Novo
+          </span>
+          <img src="./assets/Desktop/produtos/camiseta.png" alt="Camiseta conforto">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Camiseta Conforto Neon</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Algodão 100% e tons vibrantes que destacam qualquer composição.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 69,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ITEM 2 -->
+      <article class="masonry-item" data-cat="calcas" data-preco="180" data-novo="2025-10-10">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-fire me-1"></i>
+            Drop
+          </span>
+          <img src="./assets/Desktop/produtos/calca.png" alt="Calça alfaiataria">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Calça Wide Leg Linho</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Caimento impecável e versátil do casual ao elegante.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 179,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ITEM 3 -->
+      <article class="masonry-item" data-cat="calcados" data-preco="250" data-novo="2025-09-25">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-lightning-charge-fill me-1"></i>
+            Hype
+          </span>
+          <img src="./assets/Desktop/produtos/tenis.png" alt="Tênis Chunky">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Tênis Chunky V2</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Solado robusto e conforto extremo para o dia a dia.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 249,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ITEM 4 -->
+      <article class="masonry-item" data-cat="acessorios" data-preco="120" data-novo="2025-10-21">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-star-half me-1"></i>
+            Exclusivo
+          </span>
+          <img src="./assets/Desktop/produtos/oculos.png" alt="Óculos redondo">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Óculos Redondo Grafite</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Armação metálica minimalista com lente premium.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 119,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ITEM 5 -->
+      <article class="masonry-item" data-cat="acessorios" data-preco="120" data-novo="2025-10-18">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-gem me-1"></i>
+            Premium
+          </span>
+          <img src="./assets/Desktop/produtos/bolsa.png" alt="Bolsa coringa">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Bolsa Coringa Camel</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Couro sintético de alta duração para te acompanhar sempre.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 119,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ITEM 6 extra de exemplo (duplicando camiseta para variar alturas no masonry) -->
+      <article class="masonry-item" data-cat="casacos" data-preco="90" data-novo="2025-10-20">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-sunrise-fill me-1"></i>
+            Color Pop
+          </span>
+          <img style="height: 359px" src="./assets/Tablet/produtos/Jaqueta.jpg" alt="Jaqueta_Vitange">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Jaqueta Vintage</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Jaqueta vintage, aconchegante para qualquer ocasião.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 89,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ITEM 7 extra de exemplo (duplicando camiseta para variar alturas no masonry) -->
+      <article class="masonry-item" data-cat="casacos" data-preco="360" data-novo="2025-10-20">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-snow2"></i>
+            Kit inverno
+          </span>
+          <img style="height: 359px" src="./assets/Tablet/produtos/Casaco.jpg" alt="Jaqueta_Vitange">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Casaco de Inverno</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Casaco de inverno + touca e óculos, estilo e conforto para o
+              frio.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 359,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- ITEM 8 extra de exemplo (duplicando camiseta para variar alturas no masonry) -->
+      <article class="masonry-item" data-cat="camisetas" data-preco="50" data-novo="2025-10-20">
+        <div class="card-novo">
+          <span class="badge-ribbon">
+            <i class="bi bi-lightning-charge"></i>
+            Lançamento
+          </span>
+          <img style="height: 359px" src="./assets/Tablet/produtos/regata_branca.jpg" alt="Jaqueta_Vitange">
+          <div class="card-body-novo">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h5 class="fw-bold m-0">Regata Old</h5>
+              <button class="btn btn-sm btn-link text-white-50 like" aria-label="Favoritar">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <p class="text-white-50 mb-2">
+              Regata leve e confortável, ideal para dias quentes com estilo.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">R$ 49,99</span>
+              <a href="#" class="btn btn-roxo btn-sm">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <!-- CTA NEWSLETTER IMPACTANTE -->
+  <section class="container pb-5">
+    <div class="cta-news p-4 p-lg-5 text-center">
+      <h3 class="fw-bold mb-2">
+        Ganhe
+        <span style="color: var(--limao)">10% OFF</span>
+        na sua primeira compra
+      </h3>
+      <p class="text-white-50 mb-4">
+        Entre para a lista VIP e receba drops antecipados, promoções e
+        conteúdos exclusivos.
+      </p>
+      <form class="row g-2 justify-content-center"
+        onsubmit="event.preventDefault(); alert('Obrigado por se cadastrar, seu cupom já está disponível no seu e-mail!'); this.querySelector('input[type=email]').value = '';">
+        <div class="col-12 col-md-5">
+          <input id="placeholder_branco" class="form-control form-control-lg bg-dark text-white border-secondary"
+            type="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="col-12 col-md-auto">
+          <button class="btn btn-roxo btn-lg">Quero meu desconto</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="text-center bg-black text-bg-dark mt-auto">
+    <p class="card-text py-1 m-3">
+      2025
+      <i class="bi bi-c-circle"></i>
+      Desenvolvido por Otávio Oliveira | Projeto Meteora artigos de Moda.
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- Carrega o arquivo JavaScript do Bootstrap, necessário para os componentes interativos da biblioteca (como modais, dropdowns, etc.). -->
+  <script src="assets/javascript/script.js"></script>
+
+</body>
+
+</html>

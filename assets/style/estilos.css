@@ -1,0 +1,526 @@
+/*Foi criado uma lista das cores que iriamos utilizar no projeto, para faciliar criamos, classes que já guardam a cor que queremos*/
+:root {
+  --roxo: #9353ff;
+  --roxo-escuro: #7a42e0;
+  --limao: #daff01;
+  --ciano: #00f5a0;
+  --preto: #000;
+  --cinza-900: #0f0f12;
+  --cinza-700: #1b1b22;
+  --grad-1: linear-gradient(120deg, #0f0f12 0%, #1b1b22 45%, #1d0f2e 100%);
+  --grad-cta: linear-gradient(90deg, #9353ff 0%, #6a00ff 50%, #00f5a0 100%);
+}
+
+/* NAV fixa já existente no projeto */
+body {
+  background: var(--cinza-900);
+  /*fundo da página, da cor que designamos cinza-900*/
+  color: #fff;
+  /*cor da font da página, será da cor branca*/
+
+}
+
+/*Essa parte foi criada para no campo do formulário, Utilizamos o !important, para forçar e ter prioridade a algumas formatações do bootstrap*/
+#placeholder_branco::placeholder {
+  color: #ffffff !important;
+  /*cor da fonte branca, no placeholder do formulário*/
+  opacity: 1 !important;
+  /*Define que o elemento não será transparente*/
+}
+
+/*Aqui criamos um fundo linear-gradiente para a parte superior da página promoção*/
+.hero-promo {
+  background: linear-gradient(135deg, rgba(147, 83, 255, 0.5), rgba(218, 255, 1, 0.15)), url('./assets/promo-banner.jpg');
+  background-size: cover;
+  /* Garante que a imagem cubra toda a área sem cortar */
+  background-position: center center;
+  /* Ajusta o foco da imagem */
+  height: 400px;
+  /* Aumenta a altura do header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Criamos um background radial-gradiente para o fundo da parte superior da página de novidades */
+.hero-novidades {
+  background: radial-gradient(1200px 500px at 90% -50%,
+      rgba(147, 83, 255, 0.45),
+      transparent 60%),
+    radial-gradient(700px 400px at 10% 0%,
+      rgba(218, 255, 1, 0.12),
+      transparent 60%),
+    var(--grad-1);
+  padding-top: 120px;
+  /* compensar navbar fixa */
+  padding-bottom: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-blur {
+  position: absolute;
+  /* Define o posicionamento do elemento como absoluto em relação ao seu ancestral posicionado mais próximo */
+  inset: -10% -10% auto auto;
+  /* Define as distâncias do elemento em relação aos limites do ancestral (top, right, bottom, left) */
+  width: 360px;
+  /* Define a largura do elemento */
+  height: 360px;
+  /* Define a altura do elemento */
+  background: conic-gradient(from 180deg at 50% 50%,
+      /* Define um gradiente cônico como fundo */
+      #9353ff,
+      #6a00ff,
+      #00f5a0,
+      #daff01,
+      #9353ff);
+  filter: blur(60px);
+  /* Aplica um desfoque de 60 pixels ao elemento */
+  opacity: 0.25;
+  /* Define a opacidade do elemento para 25% (tornando-o semi-transparente) */
+  pointer-events: none;
+  /* Faz com que o elemento não seja um alvo para eventos do mouse/ponteiro (cliques, etc.) */
+  border-radius: 50%;
+  /* Torna o elemento completamente circular */
+}
+
+/* Estilo para os subtítulos */
+.hero-title {
+  font-size: 2.4rem;
+  /* Tamanho grande para o título */
+  color: #ffffff;
+  /* Cor base do texto */
+  font-weight: 700;
+  /* Peso mais forte para o destaque */
+  letter-spacing: 0.5px;
+  /* Leve espaçamento entre letras */
+  text-transform: capitalize;
+  /* Capitaliza a primeira letra */
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+/*Aqui foi criado um fundo com as bordas arrendondadas para envolver o texto de Lançamentos • Edição 2025 na página de Novidades*/
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(218, 255, 1, 0.08);
+  border: 1px solid rgba(218, 255, 1, 0.25);
+  border-radius: 999px;
+  color: #eaff6b;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* FILTROS/CHIPS - Aqui temos os modelos de botões para filtrar a categoria do produto */
+.chip {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  background: #141418;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* O efeito de quando passamos o mouse em cima do Botões Chips*/
+.chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(147, 83, 255, 0.5);
+}
+
+/*O efeito aplicado ao Chips quando ele está selcionado*/
+.chip.active {
+  background: var(--roxo);
+  border-color: var(--roxo);
+}
+
+
+/* Centralização da grid de produtos */
+.masonry {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que os produtos se movam para a próxima linha, caso necessário */
+  justify-content: center;
+  /* Centraliza os itens */
+  gap: 1rem;
+  /* Espaço entre os itens */
+}
+
+.masonry-item {
+  width: 100%;
+  max-width: 300px;
+  /* Limita a largura máxima dos cartões */
+  margin-bottom: 1rem;
+}
+
+/* Masory que faz com que o Grid dos produtos na página de novidades sejam exibidos do lado esquerdo */
+.masonry-novidades {
+  /* Seletor para a classe que define o layout de grid 'masonry' (colunas desiguais) */
+  column-count: 1;
+  /* Define o número de colunas para 1 (padrão para telas pequenas) */
+  column-gap: 1rem;
+  /* Define o espaçamento entre as colunas */
+}
+
+@media (min-width: 576px) {
+
+  /* Inicia um bloco de regras que se aplica a telas com no mínimo 576px de largura (ex: tablets pequenos) */
+  .masonry-novidades {
+    /* Seletor para a classe de layout 'masonry' */
+    column-count: 2;
+    /* Define que a partir desta largura, o layout terá 2 colunas */
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* Inicia um bloco de regras que se aplica a telas com no mínimo 992px de largura (ex: desktops) */
+  .masonry-novidades {
+    /* Seletor para a classe de layout 'masonry' */
+    column-count: 3;
+    /* Define que a partir desta largura, o layout terá 3 colunas */
+  }
+}
+
+@media (min-width: 1400px) {
+
+  /* Inicia um bloco de regras que se aplica a telas com no mínimo 1400px de largura (ex: desktops grandes) */
+  .masonry-novidades {
+    /* Seletor para a classe de layout 'masonry' */
+    column-count: 4;
+    /* Define que a partir desta largura, o layout terá 4 colunas */
+  }
+}
+
+.masonry-item {
+  /* Seletor para os itens individuais dentro do layout 'masonry' */
+  break-inside: avoid;
+  /* Evita quebras de coluna dentro dos itens (garante que o item não seja dividido entre colunas) */
+  margin-bottom: 1rem;
+  /* Define uma margem de 1rem na parte inferior de cada item */
+}
+
+.texto-menor {
+  /* Seletor para a classe de utilidade para texto pequeno */
+  font-size: 13px;
+  /* Define o tamanho da fonte para 13 pixels */
+}
+
+.divs-facilidades {
+  /* Seletor para as divs que exibem "facilidades" ou benefícios */
+  width: 325px;
+  /* Define uma largura fixa de 325 pixels para essas divs */
+}
+
+.div-novidades {
+  /* Seletor para as divs que agrupam conteúdo de "novidades" */
+  width: 325px;
+  /* Define uma largura fixa de 325 pixels para essas divs */
+}
+
+.botao-lilas {
+  background-color: #9353ff;
+  transition: background-color 0.3s ease;
+  /* Transição suave para hover */
+  color: #000000;
+}
+
+/* Efeito Hover no botão principal */
+.botao-lilas:hover {
+  background-color: #7a42e0;
+  /* Tom um pouco mais escuro para o hover */
+  color: #ffffff;
+}
+
+.botao-lilas:focus,
+.botao-lilas:active {
+  outline: none;
+  /* Remove o contorno padrão */
+  box-shadow: none;
+  /* Remove o sombreamento do foco */
+  background-color: #9353ff !important;
+  /* Mantém a cor roxa */
+}
+
+/* Transição suave para todos os links e botões */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Estilo para os cards de promoções */
+.card-promocao {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Animação suave */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  overflow: hidden;
+  /* Garante que nada saia dos limites do card */
+}
+
+/* Efeito de hover - animação de ampliação e sombra */
+.card-promocao:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Estilo para os cards de categoria */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Animação suave */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  overflow: hidden;
+  /* Garante que nada saia dos limites do card */
+}
+
+/* Efeito de hover - animação de ampliação e sombra */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  /* Move o card e aumenta um pouco */
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+  /* Sombra suave */
+}
+
+/* Adicionar bordas mais suaves e sutil */
+.card-header {
+  transition: background-color 0.3s ease;
+  /* Animação de mudança de cor */
+}
+
+/* Mudando a cor do fundo do card ao passar o mouse */
+.card:hover .card-header {
+  background-color: #daff01;
+  /* Cor vibrante de fundo */
+  color: white;
+  /* Muda a cor do texto para branco */
+}
+
+/* Efeito de Hover nos Cards (Categorias e Produtos) */
+.card-novo {
+  /* Seletor para o estilo base dos cards (produtos/categorias) */
+  background: #121218;
+  /* Define a cor de fundo escura do card */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Adiciona uma borda fina e semi-transparente para destaque em fundos escuros */
+  border-radius: 18px;
+  /* Arredonda os cantos do card */
+  overflow: hidden;
+  /* Garante que o conteúdo (como a imagem) não ultrapasse os limites arredondados */
+  position: relative;
+  /* Define o contexto para posicionar elementos filhos (como o 'badge-ribbon') de forma absoluta */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  /* Aplica uma sombra suave e profunda para dar profundidade ao card */
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    /* Configura a transição suave para as propriedades 'transform', 'box-shadow' e 'border-color' */
+    border-color 0.25s ease;
+  /* Transição contínua da borda */
+}
+
+.card-novo:hover {
+  /* Seletor que aplica estilos quando o mouse passa sobre o card */
+  transform: translateY(-6px);
+  /* Move o card 6px para cima, criando um efeito de "levantar" */
+  border-color: rgba(147, 83, 255, 0.65);
+  /* Altera a cor da borda para um roxo semi-transparente (efeito de foco/destaque) */
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  /* Aumenta e escurece a sombra para um efeito de destaque mais intenso */
+}
+
+.card-novo img {
+  /* Seletor para as imagens dentro dos cards */
+  width: 100%;
+  /* Garante que a imagem ocupe toda a largura do seu container */
+  display: block;
+  /* Remove possíveis espaços em branco que o 'inline' pode causar em imagens */
+}
+
+.card-body-novo {
+  /* Seletor para a área de conteúdo/texto do card */
+  padding: 1rem;
+  /* Adiciona preenchimento interno de 1rem em volta do conteúdo */
+}
+
+.price {
+  /* Seletor para o elemento que exibe o preço */
+  font-weight: 800;
+  /* Torna o texto do preço extra-negrito (bold) para destaque */
+  letter-spacing: 0.3px;
+  /* Adiciona um pequeno espaçamento entre as letras para melhorar a leitura */
+}
+
+.badge-ribbon {
+  /* Seletor para a faixa/selo de destaque no canto do card (ex: "Novo") */
+  position: absolute;
+  /* Posiciona o elemento de forma absoluta dentro do seu ancestral mais próximo com 'position: relative' (.card-novo) */
+  top: 14px;
+  /* Move o elemento 14px para baixo a partir do topo */
+  left: -6px;
+  /* Move o elemento 6px para fora do card, para a esquerda */
+  background: var(--grad-cta);
+  /* Usa uma variável CSS para um gradiente de fundo vibrante */
+  color: #000;
+  /* Define a cor do texto dentro da faixa como preto */
+  font-weight: 800;
+  /* Define o peso da fonte como extra-negrito */
+  font-size: 0.78rem;
+  /* Define um tamanho de fonte ligeiramente menor */
+  padding: 0.35rem 0.75rem;
+  /* Adiciona preenchimento interno à faixa */
+  text-transform: uppercase;
+  /* Converte todo o texto para letras maiúsculas */
+  transform: skew(-12deg);
+  /* Inclina a faixa em -12 graus (cria o efeito de "ribbon" diagonal) */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  /* Adiciona uma sombra para dar profundidade à faixa */
+}
+
+.badge-ribbon i {
+  /* Seletor para o ícone dentro da faixa (para corrigir a inclinação) */
+  transform: skew(12deg);
+  /* Inclina o ícone em +12 graus (o oposto da faixa) para que ele pareça reto */
+}
+
+/* Botões */
+.btn-roxo {
+  /* Seletor para o botão primário de cor roxa */
+  background: var(--roxo);
+  /* Define a cor de fundo usando a variável roxa */
+  border: none;
+  /* Remove a borda padrão do botão */
+}
+
+.btn-roxo:hover {
+  /* Seletor para o efeito hover no botão roxo */
+  background: var(--roxo-escuro);
+  /* Altera a cor de fundo para o roxo mais escuro no hover */
+}
+
+.btn-outline-limao {
+  /* Seletor para o botão de contorno com cor limão */
+  border-color: #eaff6b;
+  /* Define a cor da borda como limão */
+  color: #eaff6b;
+  /* Define a cor do texto como limão */
+}
+
+.btn-outline-limao:hover {
+  /* Seletor para o efeito hover no botão contorno limão */
+  background: #eaff6b;
+  /* Preenche o fundo com a cor limão no hover */
+  color: #000;
+  /* Altera a cor do texto para preto para contraste no hover */
+}
+
+/* Animação para os ícones de facilidades */
+.divs-facilidades i {
+  /* Seletor para os ícones dentro das divs de facilidades */
+  transition: transform 0.3s ease;
+  /* Define uma transição suave de 0.3 segundos para a propriedade 'transform' */
+}
+
+.divs-facilidades:hover i {
+  /* Seletor para o efeito hover nos ícones dentro das divs de facilidades */
+  transform: scale(1.1);
+  /* Aumenta o tamanho do ícone em 10% (zoom sutil) no hover */
+  /* Aumenta o ícone no hover */
+  /* Comentário explicativo */
+}
+
+@media (min-width: 768px) {
+
+  /* Inicia um bloco de regras que se aplica a telas com no mínimo 768px de largura (ex: tablets e desktops) */
+  .div-novidades {
+    /* Seletor para as divs de novidades */
+    width: 696px;
+    /* Define uma largura fixa maior (696px) para essas divs em telas maiores */
+  }
+}
+
+.footer {
+  /* Estilos do rodapé */
+  background-color: #f8f9fa;
+  /* Exemplo */
+  padding: 1rem;
+  /* Exemplo */
+}
+
+/* CTA Newsletter estiloso */
+.cta-news {
+  background: radial-gradient(800px 300px at 20% -10%,
+      rgba(218, 255, 1, 0.15),
+      transparent 60%),
+    radial-gradient(600px 300px at 100% 10%,
+      rgba(147, 83, 255, 0.25),
+      transparent 60%),
+    #101015;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+/* Animação Keyframes para surgir o título */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Começa um pouco acima */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica a animação no título principal */
+.animated-title {
+  animation: fadeIn 1s ease-out forwards;
+  /* 1 segundo de duração */
+}
+
+/* HERO chamativo */
+.hero-novidades {
+  background: radial-gradient(1200px 500px at 90% -50%,
+      rgba(147, 83, 255, 0.45),
+      transparent 60%),
+    radial-gradient(700px 400px at 10% 0%,
+      rgba(218, 255, 1, 0.12),
+      transparent 60%),
+    var(--grad-1);
+  padding-top: 120px;
+  /* compensar navbar fixa */
+  padding-bottom: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inicialmente a seção fica oculta */
+.aos-hidden {
+  opacity: 0;
+  /* Torna invisível */
+  transform: translateY(50px);
+  /* Move para baixo para ficar fora da tela */
+  pointer-events: none;
+  /* Evita interações até ser visível */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  /* Animação suave */
+}
+
+/* Quando a animação for acionada, a classe 'aos-animate' vai aplicar a visibilidade */
+.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+  /* Faz o elemento "subir" para sua posição normal */
+  pointer-events: all;
+  /* Permite interações */
+}

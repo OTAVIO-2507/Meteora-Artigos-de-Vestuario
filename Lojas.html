@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="assets/style/estilos.css">
+    <title>Página de Lojas</title>
+</head>
+
+<body class="d-flex flex-column" style="height: 100vh; background: radial-gradient(1200px 500px at 90% -50%,
+          rgba(147, 83, 255, 0.45),
+          transparent 60%),
+        radial-gradient(700px 400px at 10% 0%,
+          rgba(218, 255, 1, 0.12),
+          transparent 60%), var(--grad-1);">
+    <nav class="navbar navbar-expand-md bg-black navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <h1 class="m-0">
+                    <img class="d-block" src="./assets/logo-meteora.png" alt="Logo da loja Meteora">
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Lojas.html">Lojas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="novidades.html">Novidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promocoes.html">Promoção</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 rounded-0" type="search" placeholder="Digite o produto"
+                        aria-label="Pesquisar">
+                    <button class="btn btn-outline-light rounded-0 d-flex align-items-center" type="submit">
+                        <i class="bi bi-search-heart-fill me-1"></i> Buscar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Título da Página -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center fw-bold animated-title">
+            <i class="bi bi-shop"></i>
+            Explore o Universo Meteora: Nossas
+            Lojas
+        </h1>
+        <p class="text-center animated-title lead text-light opacity-75 mb-4">
+            Explore as lojas disponíveis próximas à
+            sua localização e visualize todos os detalhes e informações de contato de cada estabelecimento.
+        </p>
+    </div>
+    <!-- Grid de Lojas -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Loja 1 -->
+            <div class="col" data-aos="fade-up" data-aos-duration="600">
+                <div class="card-novo h-100 p-3">
+                    <img src="assets/Lojas/loja1.jpg" class="card-img-top" alt="Loja 1">
+                    <div class="card-body">
+                        <h5 style="padding-top: 20px; padding-bottom: 10px; color: var(--limao);"
+                            class="card-title fw-bold">
+                            <i class="bi bi-bookmark-star"></i>
+                            Loja Meteora - Shopping 1
+                        </h5>
+                        <p class="card-text">
+                            - Localizada no Shopping 1, com diversos produtos de moda e acessórios
+                            exclusivos.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>
+                                    <i class="bi bi-geo-alt"></i> Endereço:
+                                </strong>
+                                Rua Exemplo, 123
+                            </li>
+                            <li>
+                                <strong>
+                                    <i class="bi bi-clock"></i> Horário:
+                                </strong>
+                                10:00 - 20:00
+                            </li>
+                            <li>
+                                <strong>
+                                    <i class="bi bi-telephone"></i> Telefone:
+                                </strong>
+                                (11) 1234-5678
+                            </li>
+                        </ul>
+                        <a href="Lojas.html" class="btn btn-primary botao-lilas rounded-2 border-0">Veja Mais</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Loja 2 -->
+            <div class="col" data-aos="fade-up" data-aos-duration="800">
+                <div class="card-novo h-100 p-3">
+                    <img src="assets/Lojas/loja2.jpg" class="card-img-top" alt="Loja 2">
+                    <div class="card-novo-body">
+                        <h5 style="padding-top: 15px; padding-bottom: 4px; color: var(--limao);"
+                            class="card-novo-title fw-bold">
+                            <i class="bi bi-bookmark-star"></i>
+                            Loja Meteora - Shopping
+                            2
+                            </span>
+                        </h5>
+                        <p class="card-text">
+                            - Loja no Shopping 2, especializada em roupas femininas e acessórios
+                            modernos.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>
+                                    <i class="bi bi-geo-alt"></i> Endereço:
+                                </strong>
+                                Avenida Exemplo, 456
+                            </li>
+                            <li>
+                                <strong>
+                                    <i class="bi bi-clock"></i> Horário:
+                                </strong>
+                                10:00 - 22:00
+                            </li>
+                            <li>
+                                <strong>
+                                    <i class="bi bi-telephone"></i> Telefone:
+                                </strong>
+                                (11) 9876-5432
+                            </li>
+                        </ul>
+                        <a href="Lojas.html" class="btn btn-primary botao-lilas rounded-2 border-0">Veja Mais</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Loja 3 -->
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card-novo h-100 p-3">
+                    <img src="assets/Lojas/loja3.jpg" class="card-img-top" alt="Loja 3">
+                    <div class="card-body">
+                        <h5 style="padding-top: 15px; padding-bottom: 12px; color: var(--limao);"
+                            class="card-title fw-bold">
+                            <i class="bi bi-bookmark-star"></i>
+                            Loja Meteora - Rua Central
+                        </h5>
+                        <p class="card-text">
+                            - Nossa loja principal localizada na Rua Central, com toda a coleção em
+                            destaque.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>
+                                    <i class="bi bi-geo-alt"></i> Endereço:
+                                </strong>
+                                Rua Central, 789
+                            </li>
+                            <li>
+                                <strong>
+                                    <i class="bi bi-clock"></i> Horário:
+                                </strong>
+                                09:00 - 18:00
+                            </li>
+                            <li>
+                                <strong>
+                                    <i class="bi bi-telephone"></i> Telefone:
+                                </strong>
+                                (11) 2345-6789
+                            </li>
+                        </ul>
+                        <a href="Lojas.html" class="btn btn-primary botao-lilas rounded-2 border-0">Veja Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="text-center bg-black text-bg-dark mt-auto">
+        <p class="py-1 my-3">
+            2025
+            <i class="bi bi-c-circle"></i>
+            Desenvolvido por Otávio Oliveira |
+            Projeto Meteora artigos de Moda.
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>
