@@ -13,7 +13,7 @@ Interatividade: Implementação de filtros por categoria e ordenação de produt
 
 Animações: Efeitos de rolagem elegantes e sutis com a biblioteca AOS e efeitos de hover via CSS.
 
-##🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 HTML5: Estrutura semântica do projeto.
 
 CSS3: Estilização personalizada (estilos.css), com variáveis e gradientes para cores vibrantes (roxo e limão).
@@ -26,7 +26,7 @@ Bootstrap Icons: Biblioteca de ícones moderna e leve.
 
 AOS (Animate On Scroll): Biblioteca para animar elementos ao entrar na área visível da página.
 
-##📦 Funcionalidades Principais
+## 📦 Funcionalidades Principais
 Navegação Fixa: Navbar responsiva com menu colapsável e formulário de busca.
 
 Carrossel de Banners: Banners com imagens otimizadas para diferentes resoluções (Mobile, Tablet, Desktop).
@@ -39,7 +39,7 @@ Facilidades: Seção de benefícios (PIX, Troca Grátis, Sustentabilidade) com �
 
 CTA Newsletter: Seção de Cadastro impactante com gradientes e destaque de cor.
 
-##🚀 Como Executar
+## 🚀 Como Executar
 1. Clone ou baixe o repositório em sua máquina local.
 
 2. Abra o arquivo principal index.html em qualquer navegador web moderno.
