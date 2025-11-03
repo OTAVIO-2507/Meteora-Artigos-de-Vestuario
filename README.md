@@ -2,7 +2,7 @@
 Uma landing page completa e responsiva para uma loja virtual de moda, focada em estilo e tendências. Este projeto foi desenvolvido para demonstrar a aplicação eficiente do Bootstrap 5 em um design moderno, escuro e vibrante.
 
 ## 🌐 Visualize o projeto:
-[Ver Projeto Online](Insira o link de demonstração do seu projeto aqui)
+**[Ver Projeto Online](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
 
 ## 🌟 Destaques do Projeto
 - Design Responsivo: Layout que se adapta perfeitamente a dispositivos móveis, tablets e desktops (Mobile-First).
