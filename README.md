@@ -9,8 +9,6 @@ Landing page responsiva para uma loja virtual de moda, desenvolvida para demonst
 
 [![Demonstração online](https://img.shields.io/badge/demonstra%C3%A7%C3%A3o-online-2EA44F?style=for-the-badge)](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
 
-[![Prévia da página](docs/preview.webp)](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
-
 ## Visão geral
 
 O Meteora simula a vitrine completa de um e-commerce de moda: navegação fixa, carrossel de banners, grade de categorias, listagem de produtos com filtros e ordenação dinâmica, e página adicional de lojas físicas. O foco do estudo foi dominar o sistema de grid, os componentes prontos e a abordagem mobile-first do Bootstrap 5, complementados por JavaScript próprio para a camada de interatividade.
@@ -52,12 +50,10 @@ Meteora-Artigos-de-Vestuario/
 ├── Lojas.html              Lojas físicas
 ├── novidades.html          Novidades
 ├── promocoes.html          Promoções
-├── assets/
-│   ├── style/estilos.css   Estilos personalizados
-│   ├── javascript/         Filtros, ordenação e interações
-│   └── ...                 Banners, categorias e produtos
-└── docs/
-    └── preview.webp        Imagem de prévia do README
+└── assets/
+    ├── style/estilos.css   Estilos personalizados
+    ├── javascript/         Filtros, ordenação e interações
+    └── ...                 Banners, categorias e produtos
 ```
 
 ## Autor
