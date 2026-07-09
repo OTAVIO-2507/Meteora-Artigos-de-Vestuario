@@ -1,32 +1,67 @@
-# 🛍️ Meteora - Artigos de Moda
-Uma landing page completa e responsiva para uma loja virtual de moda, focada em estilo e tendências. Este projeto foi desenvolvido para demonstrar a aplicação eficiente do Bootstrap 5 em um design moderno, escuro e vibrante.
+# Meteora — Artigos de Vestuário
 
-## 🌐 Visualize o projeto:
-**[Ver Projeto Online](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)**
+Landing page responsiva para uma loja virtual de moda, desenvolvida para demonstrar a aplicação do Bootstrap 5 em um design escuro e vibrante, com filtros de produtos, carrossel e animações de rolagem.
 
-## 🌟 Destaques do Projeto
-- Design Responsivo: Layout que se adapta perfeitamente a dispositivos móveis, tablets e desktops (Mobile-First).
-- Componentes Bootstrap: Utilização extensiva de componentes como Navbar, Carrossel, Cards e o Sistema de Grid (incluindo o layout Masonry adaptado para os produtos) para construção rápida e eficiente.
-- Interatividade: Implementação de filtros por categoria e ordenação de produtos utilizando JavaScript.
-- Animações: Efeitos de rolagem elegantes e sutis com a biblioteca AOS e efeitos de hover via CSS.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap_5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## 🛠️ Tecnologias Utilizadas
-- HTML5: Estrutura semântica do projeto.
-- CSS3: Estilização personalizada (estilos.css), com variáveis e gradientes para cores vibrantes (roxo e limão).
-- JavaScript: Lógica para a funcionalidade de "curtir" produtos, filtros e ordenação dinâmica.
-- Bootstrap 5.3: (Ênfase no estudo e aplicação) Framework fundamental para o layout e componentes prontos.
-- Bootstrap Icons: Biblioteca de ícones moderna e leve.
-- AOS (Animate On Scroll): Biblioteca para animar elementos ao entrar na área visível da página.
+[![Demonstração online](https://img.shields.io/badge/demonstra%C3%A7%C3%A3o-online-2EA44F?style=for-the-badge)](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
 
-## 📦 Funcionalidades Principais
-- Navegação Fixa: Navbar responsiva com menu colapsável e formulário de busca.
-- Carrossel de Banners: Banners com imagens otimizadas para diferentes resoluções (Mobile, Tablet, Desktop).
-- Grid de Categorias: Cards de categorias com efeito de hover dinâmico.
-- Produtos em Destaque: Layout Masonry para a seção "Produtos que estão bombando!", utilizando classes Bootstrap para colunas.
-- Facilidades: Seção de benefícios (PIX, Troca Grátis, Sustentabilidade) com ícones animados.
-- CTA Newsletter: Seção de Cadastro impactante com gradientes e destaque de cor.
+[![Prévia da página](docs/preview.webp)](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
 
-## 🚀 Como Executar
-1. Clone ou baixe o repositório em sua máquina local.
-2. Abra o arquivo principal index.html em qualquer navegador web moderno.
-3. Não é necessária nenhuma configuração adicional. O projeto carrega o Bootstrap, ícones e a biblioteca AOS através de CDNs, garantindo que tudo funcione imediatamente.
+## Visão geral
+
+O Meteora simula a vitrine completa de um e-commerce de moda: navegação fixa, carrossel de banners, grade de categorias, listagem de produtos com filtros e ordenação dinâmica, e página adicional de lojas físicas. O foco do estudo foi dominar o sistema de grid, os componentes prontos e a abordagem mobile-first do Bootstrap 5, complementados por JavaScript próprio para a camada de interatividade.
+
+## Funcionalidades
+
+- Layout responsivo mobile-first para celular, tablet e desktop
+- Carrossel de banners e navbar colapsável com componentes do Bootstrap
+- Filtros por categoria e ordenação dinâmica de produtos em JavaScript
+- Grade de produtos em layout adaptado estilo masonry
+- Animações de entrada ao rolar a página com a biblioteca AOS
+- Páginas complementares de lojas físicas, novidades e promoções
+
+## Tecnologias
+
+| Tecnologia | Aplicação no projeto |
+| --- | --- |
+| Bootstrap 5.3 | Grid, navbar, carrossel, cards e utilitários responsivos |
+| HTML5 | Estrutura semântica das páginas |
+| CSS3 | Estilos personalizados, variáveis e gradientes |
+| JavaScript (ES6+) | Filtros, ordenação e interações de produtos |
+| AOS | Animações de entrada ao rolar |
+| Bootstrap Icons | Iconografia da interface |
+
+## Como executar
+
+```bash
+git clone https://github.com/OTAVIO-2507/Meteora-Artigos-de-Vestuario.git
+cd Meteora-Artigos-de-Vestuario
+```
+
+Abra o arquivo `index.html` no navegador. As dependências são carregadas via CDN.
+
+## Estrutura do projeto
+
+```
+Meteora-Artigos-de-Vestuario/
+├── index.html              Página principal da loja
+├── Lojas.html              Lojas físicas
+├── novidades.html          Novidades
+├── promocoes.html          Promoções
+├── assets/
+│   ├── style/estilos.css   Estilos personalizados
+│   ├── javascript/         Filtros, ordenação e interações
+│   └── ...                 Banners, categorias e produtos
+└── docs/
+    └── preview.webp        Imagem de prévia do README
+```
+
+## Autor
+
+**Otávio Oliveira** — Desenvolvedor Full Stack
+
+[GitHub](https://github.com/OTAVIO-2507) · [Portfólio](https://otavio-2507.github.io/Portifolio-v2/) · [E-mail](mailto:56otavio@gmail.com)
