@@ -1,6 +1,6 @@
 <div align="center">
 
-# Meteora — Artigos de Vestuário
+# Meteora Artigos de Vestuário
 
 Landing page responsiva para uma loja virtual de moda, desenvolvida para demonstrar a aplicação do Bootstrap 5 em um design escuro e vibrante, com filtros de produtos, carrossel e animações de rolagem.
 
