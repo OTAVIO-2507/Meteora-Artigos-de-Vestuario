@@ -9,7 +9,9 @@ Landing page responsiva para uma loja virtual de moda, desenvolvida para demonst
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap_5.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 
-[![Demonstração online](https://img.shields.io/badge/demonstra%C3%A7%C3%A3o-online-2EA44F?style=flat-square)](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
+![Prévia do projeto](assets/img/preview.jpg)
+
+**[Ver Projeto](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)**
 
 </div>
 
@@ -25,6 +27,16 @@ O Meteora simula a vitrine completa de um e-commerce de moda: navegação fixa, 
 - Grade de produtos em layout adaptado estilo masonry
 - Animações de entrada ao rolar a página com a biblioteca AOS
 - Páginas complementares de lojas físicas, novidades e promoções
+
+## Decisões de projeto
+
+Algumas escolhas que não são óbvias pelo código:
+
+**Filtro e ordenação se compõem em vez de competir.** A ordenação não trabalha sobre a lista inteira: ela recolhe antes só os itens visíveis (`it.style.display !== "none"`) e reordena esse recorte. Assim, filtrar por categoria e depois ordenar por preço produz o resultado esperado, em vez de a segunda ação desfazer a primeira.
+
+**Categoria e preço moram no HTML, não em JavaScript.** `data-cat` e `data-preco` ficam nos próprios cards, então filtrar e ordenar é ler atributo do DOM — não existe um array paralelo de produtos que possa sair de sincronia com o que está na tela.
+
+**O like troca o ícone, não a cor.** Alternar entre `bi-heart` e `bi-heart-fill` distingue os dois estados pela forma, e não só pelo preenchimento — o que sobrevive a tela em preto e branco e a quem não separa bem os matizes.
 
 ## Tecnologias
 
