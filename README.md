@@ -9,10 +9,12 @@ Landing page responsiva para uma loja virtual de moda, desenvolvida para demonst
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap_5.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 
-![Prévia do projeto](assets/img/preview.jpg)
-
 [![Ver projeto](https://img.shields.io/badge/Ver_projeto-3642B5?style=for-the-badge&logo=googlechrome&logoColor=white)](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
 [![Código](https://img.shields.io/badge/C%C3%B3digo-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/OTAVIO-2507/Meteora-Artigos-de-Vestuario)
+
+<br>
+
+[![Prévia do projeto](assets/img/preview.jpg)](https://otavio-2507.github.io/Meteora-Artigos-de-Vestuario/)
 
 </div>
 
